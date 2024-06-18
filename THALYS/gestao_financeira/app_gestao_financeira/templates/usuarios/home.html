@@ -1,0 +1,23 @@
+{% extends 'usuarios/base.html' %}
+{% block conteudo %}
+
+
+<form action="{% url 'financeiro' %}" method="post">
+    {% csrf_token %}
+
+    <div style="text-align: center; padding: 40px;" class="container">
+        <h1>Gerencie Seu Dinheiro!</h1>
+
+        <div style="padding: 10px;">
+            <h3>Registre Suas Receitas e Gastos</h3>
+
+            <input name="receita" class="form-control-sm" type="text" placeholder="Receitas">
+            <input name="gasto" class="form-control-sm" type="text" placeholder="Gastos">
+
+            <button class="form-control-sm">Enviar</button>
+        </div>
+
+    </div>
+
+</form>
+{% endblock %}
